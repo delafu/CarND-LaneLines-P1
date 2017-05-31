@@ -16,6 +16,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+[image2]: ./test_images/solidWhiteCurve.jpg "Sample 1"
+[image3]: ./test_images_ouput/solidWhiteCurve.jpg "Sample 1 with Lines"
+
 
 ---
 
@@ -23,7 +26,14 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 6 steps:
+
+* Convert the image to the gray scale
+* Apply a Gaussian Blur filter
+* Find edges using Canny edge detector
+* Define the region that is interesting to find lanes
+* Run the Hough Transform to find the lanes
+* And last draw the lines
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
