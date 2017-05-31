@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 6 steps:
+My pipeline consists of 6 steps:
 
 * Convert the image to the gray scale
 * Apply a Gaussian Blur filter
@@ -35,11 +35,17 @@ My pipeline consisted of 6 steps:
 * Run the Hough Transform to find the lanes
 * And last draw the lines
 
-Using this pipeline I´m very happy with the results that I´ve obtained in the images and in the two first videos. For example 
+I´m happy with the results I´ve obtained in the static images and in the first two videos, but I have to work to fix the challenge video that is horrible. I´m going to explain some of the steps of the pipeline.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+### Find edges using Canny edge detector
 
-![alt text][image1]
+I´ve used a very similar parameters that I used in the lesson and I think that I have a good result.
+
+### Find edges using Canny edge detector
+
+I´ve used a practical method and I´ve selected a polygon 
+
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
