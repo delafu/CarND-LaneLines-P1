@@ -35,7 +35,7 @@ My pipeline consisted of 6 steps:
 * Run the Hough Transform to find the lanes
 * And last draw the lines
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+Using this pipeline I´m very happy with the results that I´ve obtained in the images and in the two first videos. For example 
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
