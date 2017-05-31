@@ -1,9 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -35,29 +31,46 @@ My pipeline consists of 6 steps:
 * Run the Hough Transform to find the lanes
 * And last draw the lines
 
-I´m happy with the results I´ve obtained in the static images and in the first two videos, but I have to work to fix the challenge video that is horrible. I´m going to explain some of the steps of the pipeline.
+I´m happy with the results I´ve obtained in the static images and in the first two videos, but I have to work to fix the challenge video. 
+
+[image1]
+[image2]
+
+
+
+I´m going to explain some of the steps of the pipeline.
 
 ### Find edges using Canny edge detector
 
-I´ve used a very similar parameters that I used in the lesson and I think that I have a good result.
+I´ve used similar parameters that I used in the lesson and I think that I got a good result.
 
-### Find edges using Canny edge detector
+### Define the region that is interesting to find lanes
 
-I´ve used a practical method and I´ve selected a polygon 
+I´ve used a practical method and I´ve selected a polygon based in the height and width of the image and from testing some different values. 
 
+### Run the Hough Transform to find the lanes
 
+I´ve run the Hough Transform with values like used in the lessons and they work very well with exception of very shiny images.
 
+### Draw the lines
 
-### 2. Identify potential shortcomings with your current pipeline
+This was the most tricky part. I calculated the lines using the average slope, x and y of the lines obtained from the Hough transform. I discarded the horizontal (or near horizontal)lines and then using the equation y=mx+b I was able to calculate the lines from the bottom of the image to the top of the region of interest. All of this work is done in the avg_lines function.
 
+I used a moving average to stabilize the video. When I did not use the lines move too much. 
 
-One potential shortcoming would be what would happen when ... 
+I´ve drawn the lines for the videos using weighted_img function to get a transparent effect. I had to create a black image and draw the lines on it and then call to the weighted function.
 
-Another shortcoming could be ...
+### Identify potential shortcomings with your current pipeline
+
+My current pipeline does not work very well in the challenge video. I think that one of the problems is that has problems with shinny images.
+
+I think that the pipeline will have problems in curves
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A potential improvement could be to detect white and yellow lines instead of all the lines in the image.
 
-Another potential improvement could be to ...
+Another improvement would be to give more value to the lines near the observer.
+
+
