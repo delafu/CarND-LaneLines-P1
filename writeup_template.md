@@ -11,9 +11,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
 [image2]: ./test_images/solidWhiteCurve.jpg "Sample 1"
-[image3]: ./test_images_ouput/solidWhiteCurve.jpg "Sample 1 with Lines"
+[image3]: ./test_images_output/solidWhiteCurve.jpg "Sample 1 with Lines"
+[image4]: ./test_images_output/hough_solidWhiteCurve.jpg "Sample 1 after Hough"
 
 
 ---
@@ -33,9 +33,11 @@ My pipeline consists of 6 steps:
 
 I´m happy with the results I´ve obtained in the static images and in the first two videos, but I have to work to fix the challenge video. 
 
-![alt text][image1]
-[image2]
+![alt text][image2]
+![alt text][image4]
+![alt text][image3]
 
+You can watch the videos in the [videos directory](https://github.com/delafu/CarND-LaneLines-P1/tree/master/test_videos_output)
 
 
 I´m going to explain some of the steps of the pipeline.
