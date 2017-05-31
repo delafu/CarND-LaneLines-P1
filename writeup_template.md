@@ -33,7 +33,7 @@ My pipeline consists of 6 steps:
 
 I´m happy with the results I´ve obtained in the static images and in the first two videos, but I have to work to fix the challenge video. 
 
-[image1]
+![alt text][image1]
 [image2]
 
 
